@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <div class="background-animation"></div>
+    <!-- nav list -->
+    <header>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="hidden">
+            <ul>
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#languages"><i class="fas fa-laptop-code"></i> Languages</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <div class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="profile-image" data-tilt>
+                <img src="a_cat_operating_an_apple_system_focused_on_deigning_a_web_and_add_a_glass_top_on_the_table_where_he_ktm5kik0cnvizvpqmx2l_3.png" alt="Profile Picture">
+            </div>
+            <h1 class="floating-text">Hi, It's <span class="highlight">CRUZ LORD TEK</span></h1>
+            <p class="typed-container">A <span id="typed-text"></span></p>
+            <div class="social-links">
+                <a href="https://github.com/cruzlorddy" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://whatsapp.com/2348167666831" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/2348167666831" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            
+        </section>
+
+        <section id="about" >
+            <b>About Me</b>
+            <div class="about"> 
+                <div class="about_card">
+                    
+                <br>
+                     Brand Cruz Lord Tek, a passionate and dedicated developer with a flair for creating innovative and efficient solutions. 
+                    With a strong background in Frontend Development, Backend Development, and expertise in Artificial Intelligence,
+                    I bring a comprehensive skill set that can tackle any project with precision and creativity. 
+                    My experience extends beyond just coding—I excel in Graphics/Video Editing, Social Media Management, 
+                    and developing interactive, user-friendly web applications that deliver exceptional user experiences.
+            </div>
+            <div class="why_me">
+                Why You Should Pick Me for Your Project
+                <br>
+                <div class="about_card">
+                    <ul>
+                        <li> <b>Versatile Expertise:</b>
+                            I have a well-rounded skill set that spans frontend and backend development, allowing me to handle projects from design to deployment seamlessly. Whether it's crafting a visually stunning UI or implementing robust server-side logic, I ensure every aspect of the project meets and exceeds expectations.
+                        </li>
+                        <li>
+                            <b>Creative Vision:</b>
+                                My background in graphics and video editing ensures your project stands out visually, while my coding skills ensure it’s functional and user-centric. I combine creativity with technical precision to deliver solutions that are both beautiful and effective.
+                        </li>
+   
+                        <li> <b>Proven Problem-Solving Skills:</b>  With my proficiency in AI and programming languages like JavaScript, Python, Java, and C++, I excel at tackling complex challenges. I transform ideas into practical, cutting-edge solutions tailored to your specific needs. </li>
+                        <li>
+                            <b>Attention to Detail:</b> I prioritize clean, maintainable code and user-friendly interfaces. Your project will not only work flawlessly but also offer a polished and professional look.
+                        </li>
+                        <li>
+                            Clear Communication & Collaboration: I believe in building strong client relationships through transparent communication and timely updates. Your vision is my priority, and I’ll work closely with you to ensure it’s realized.
+                        </li>
+                        <li>
+                           <b>Timely Delivery:</b>  I understand the importance of deadlines and am committed to delivering high-quality work within the agreed timeframe.
+                        </li>
+    
+                    </ul>
+
+                </div>
+            </div>
+                </div>
+    Let’s work together to bring your project to life. Whether it’s a sleek website, a powerful application, or a creative multimedia project, I’m ready to turn your ideas into reality!
+                
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            
+        </section>
+       
+        <!-- skills -->
+
+        <section id="skills" > 
+            <h2>List of Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card" onclick="toggleFlip(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-code"></i>
+                            <h3>FRONTEND DEVELOPMENT</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Building visually appealing, responsive, and user-friendly interfaces using HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="toggleFlip(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-server"></i>
+                            <h3>BACKEND DEVELOPMENT</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Creating efficient server-side applications, managing databases, and ensuring smooth system functionality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="toggleFlip(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-robot"></i>
+                            <h3>ARTIFICIAL INTELLIGENCE</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Designing smart systems capable of learning and decision-making using AI techniques and tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="toggleFlip(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>GRAPHICS/VIDEO EDITING</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Crafting visually appealing graphics and professional-quality videos for various purposes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+       
+       
+        <!-- programming language -->
+        <section id="languages" >
+            <h2>Programming Languages</h2>
+            <div class="language-selector">
+                <button class="language-btn active" data-language="javascript">JavaScript</button>
+                <button class="language-btn" data-language="python">Python</button>
+                <button class="language-btn" data-language="java">HTML,CSS</button>
+                <button class="language-btn" data-language="java">c++</button>
+
+            </div>
+            <div class="language-info active" id="javascript">
+                <h3>JavaScript</h3>
+                <p>JavaScript is a versatile programming language that powers the web. It enables interactive and dynamic content, making websites come alive with user interactions and real-time updates.</p>
+            </div>
+            <div class="language-info" id="python">
+                <h3>Python</h3>
+                <p>Perfect for data science, AI, and backend development.</p>
+            </div>
+            <div class="language-info" id="java">
+                <h3>Html,Css</h3>
+                <p>Very used for frontend website design.</p>
+            </div>
+            <div class="language-info" id="c++">
+                <h3>C++</h3>
+                <p>Enterprise-grade language for building robust applications.</p>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+       
+         <!-- projects -->
+         <section id="projects" >
+            <div class="quizgame">
+                <h2>List of web programming done by cruzlorddy</h2>
+
+                <h3 > <a href="./QUIZ FILES/TIKZZOR/media.htm"> A QUIZ GAME</a></h3>
+                
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        
+
+
+        <section id="contact" ">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <form action="send_email.php" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <h2>You can also reach me via</h2>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://whatsapp.com/2348167666831" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/2348167666831" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4><li><a href="#home" class="gohome"><i class="fas fa-home"></i>back to top</a></li></h4>
+
+        </section>
+       
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    
+</body>
+</html>
