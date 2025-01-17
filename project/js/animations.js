@@ -1,5 +1,20 @@
 import { themeManager, scrollManager, progressManager, formManager } from './utils.js';
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+    const options = { threshold: 0.2 };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
     AOS.init({

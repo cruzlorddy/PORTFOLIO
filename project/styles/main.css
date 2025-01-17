@@ -46,7 +46,10 @@ nav, nav * {
     transform: none !important;
 }
 
-
+.theme-toggle {
+    cursor: pointer;
+    margin-top: 4rem;
+}
 
 nav ul {
     list-style: none;
@@ -71,7 +74,7 @@ nav a:hover, nav a.active {
 .nav-toggle {
     cursor: pointer;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 7.1rem;
 }
 
 section {
@@ -81,11 +84,135 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* opacity: 0; */
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    
 }
-
+#home h1 {
+    cursor: pointer;
+}
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #17795E;
+    background-color: #209978;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #17795E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: #fff;
+  }
+  
+  .button:hover {
+    background: #17795E;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #146c54;
+  }
+  
+  .button:active {
+    border: 1px solid #146c54;
+  }
 .hero {
     text-align: center;
+    background-image: url(/image/project/image/IMG-20250105-WA0027.jpg);
 }
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.button-display {
+  display: flex;
+  gap: 2em;
+}
+/* second one */
+/* From Uiverse.io by adamgiebl */ 
+.projectbtn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+  margin-top: 1em;
+}
+
+.projectbtn svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.projectbtn span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.projectbtn:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.projectbtn:hover span {
+  transform: translateX(7px);
+}
+
 /* about */
  
  .about_card {
@@ -107,12 +234,12 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    width: 100%;
+    width: 70%;
     max-width: 1200px;
-    color: var( --primary-color);
+    color: var( --primary-color) !important;
 }
 .about {
-    background: var(--card-background);
+    background: var(--card-background) !important;
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
@@ -121,13 +248,85 @@ section {
     display: grid;
     /* flex-direction: column; */
 }
-/* .why_me {
+.card2 {
+    width: 250px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card2 p {
+    font-size: .5em;
+    color: #555;
+    margin-top: 10px;
+}
+.card2 svg {
+    width: 60px;
+    height: 60px;
+    fill: #6c63ff;
+    margin-bottom: 20px;
+}
+
+.card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card2-content {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+.highlight {
+    color: #ff758c;
+}
+.card3 {
+    width: 250px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 2.2em;
+}
+
+.card3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card3 svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card3-content {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+.highlight {
+    color: #ff758c;
+}
+.why_me {
+    max-width: 200px;
     background: var(--card-background);
-    padding: 2rem;
-    border-radius: 8px;
     text-align: left;
     cursor: pointer;
-} */
+}
 
 
 .profile-image {
@@ -137,6 +336,9 @@ section {
     overflow: hidden;
     margin-bottom: 2rem;
     border: 4px solid var(--primary-color);
+    animation: spin-fast 2s linear forwards; /* Apply animation */
+    transform: translateY(-200px); /* Initial position above */
+    opacity: 0;
 }
 
 .profile-image img {
@@ -144,34 +346,180 @@ section {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    transition: ease 1000ms;
+}
+.profile-image img:hover{
+  transform: scale(1.1);
+}
+@keyframes spin-fast {
+  0% {
+      transform: translateY(-200px) rotate(0deg);
+      opacity: 0;
+  }
+  50% {
+      transform: translateY(0) rotate(1800deg); /* Rotate 5 times at 50% */
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(0) rotate(3600deg); /* Rotate 10 times at 100% */
+      opacity: 1;
+  }
+}
+/* .floating-text,  */
+.social-links,
+h6, section
+.typed-container {
+    opacity: 0;
+    transform: translateY(50px); /* Start from below */
+    animation: fade-in-up 1s ease-out forwards;
+    animation-delay: 2s; /* Delay to match the spinning animation */
 }
 
-.social-links {
+.linkss {
+  display: flex;
+  gap: 1em;
+  opacity: 0;
+  transform: translateY(50px); /* Start from below */
+  animation: fade-in-up 1s ease-out forwards;
+  animation-delay: 3s; /* Delay to match the spinning animation */
+}
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.cssbuttons-io svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+.cssbuttons-io span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cssbuttons-io::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+  transform: scale(0.95);
+}
+
+/* Animation Keyframes for Fading Up */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.highlight {
+  color: #f39c12;
+  animation: brighten 1s ease-in forwards;
+  animation-delay: 2.5s; /* Slightly delayed for dramatic effect */
+}
+
+@keyframes brighten {
+  0% {
+      color: #999;
+  }
+  100% {
+      color: #f39c12;
+  }
+}
+#projects {
+    position: relative;
+    margin: 100px 0 0 200px;
+    /* width: 70%;
+    height: 50px; */
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+   
 }
+.project_display {
+    display: grid;
+    position: absolute;
 
-.social-links a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: var(--transition);
 }
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
+ #projects img{
+   /* width: 20%;
+   height: 100%; */
+   /* object-fit: cover; */
+   /* border-radius: 10px; */
+   transition: all ease-in-out 0.5s; 
+   
+}
+#projects img:hover{
+    /* width: 70%; */
     cursor: pointer;
+    /* background-size: cover; */
 }
+.img1:active{
+    width: 100%;
+    background-image: url(/project/image/weather.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* gap: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; */
+    margin-top: 3rem;
     color: var( --primary-color);
 
+}
+.skill-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    
 }
 
 .skill-card {
@@ -185,6 +533,202 @@ section {
     /* transform: rotateY(180deg); */
 
 }
+/* card */
+/* From Uiverse.io by Yaseen549 */ 
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+   }
+ .card h5{
+   text-align: center;
+   cursor: pointer;
+   transition: ease 1000ms;
+   
+   }
+   .card h5:hover{
+    color:#ff2233;
+    transform: scale(1.1);
+   }
+  .card svg {
+    margin-top: 17px;
+    margin-left: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    width: 170px;
+   }
+   
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+  }
+  
+  .front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+    animation: rotation_481 5000ms infinite linear;
+  }
+  
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #151515;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .card:hover .content {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+  .front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .front-content .badge {
+    background-color: #00000055;
+    padding: 2px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+  }
+  
+  .description {
+    box-shadow: 0px 0px 10px 5px #00000088;
+    width: 100%;
+    padding: 10px;
+    background-color: #00000099;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title p {
+    width: 100%;
+  }
+  
+  .card-footer {
+    color: #ffffff88;
+    margin-top: 5px;
+    font-size: 8px;
+  }
+  
+  .front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #ffbb66;
+    position: relative;
+    filter: blur(15px);
+    animation: floating 2600ms infinite linear;
+  }
+  
+  #bottom {
+    background-color: #ff8866;
+    left: 50px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    animation-delay: -800ms;
+  }
+  
+  #right {
+    background-color: #ff2233;
+    left: 160px;
+    top: -80px;
+    width: 30px;
+    height: 30px;
+    animation-delay: -1800ms;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
 .card-inner {
     position: relative;
     width: 100%;
@@ -243,7 +787,7 @@ section {
     font-size: 14px;
     line-height: 1.5;
 }
-
+/* end */
 .language-selector {
     display: flex;
     gap: 1rem;
@@ -264,7 +808,36 @@ section {
 .language-btn.active {
     background: var(--primary-color);
 }
-
+.progress-container {
+    width: 300px;
+    height: 25px;
+    background-color: #e0e0e0;
+    border-radius: 12.5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 12.5px;
+    animation: grow 2s ease-in-out;
+  }
+  
+  @keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 90%;
+    }
+  }
 .language-info {
     display: none;
     background: var(--card-background);
@@ -273,9 +846,235 @@ section {
     max-width: 600px;
 }
 
+.language-info {
+    display: none;
+}
 .language-info.active {
     display: block;
 }
+.language-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* loader */
+        /* From Uiverse.io by fanishah */ 
+/* From Uiverse.io by fanishah */ 
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+ 
+  z-index: 9999;
+  /* display: none;  Hidden by default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+    display: block;
+    width: 550px;
+    height: auto;
+  }
+  
+  .loader_body,
+    .loader_front,
+    .loader_handlebars,
+    .loader_pedals,
+    .loader_pedals-spin,
+    .loader_seat,
+    .loader_spokes,
+    .loader_spokes-spin,
+    .loader_tire {
+    animation: bikeBody 3s ease-in-out infinite;
+    stroke: var(--primary);
+    transition: stroke var(--trans-dur);
+  }
+  
+  .loader_front {
+    animation-name: bikeFront;
+  }
+  
+  .loader_handlebars {
+    animation-name: bikeHandlebars;
+  }
+  
+  .loader_pedals {
+    animation-name: bikePedals;
+  }
+  
+  .loader_pedals-spin {
+    animation-name: bikePedalsSpin;
+  }
+  
+  .loader_seat {
+    animation-name: bikeSeat;
+  }
+  
+  .loader_spokes,
+    .loader_tire {
+    stroke: currentColor;
+  }
+  
+  .loader_spokes {
+    animation-name: bikeSpokes;
+  }
+  
+  .loader_spokes-spin {
+    animation-name: bikeSpokesSpin;
+  }
+  
+  .loader_tire {
+    animation-name: bikeTire;
+  }
+  
+    /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(var(--hue), 90%, 50%);
+      --fg: hsl(var(--hue), 90%, 90%);
+    }
+  }
+  
+    /* Animations */
+  @keyframes bikeBody {
+    from {
+      stroke-dashoffset: 79;
+    }
+  
+    33%,
+      67% {
+      stroke-dashoffset: 0;
+    }
+  
+    to {
+      stroke-dashoffset: -79;
+    }
+  }
+  
+  @keyframes bikeFront {
+    from {
+      stroke-dashoffset: 19;
+    }
+  
+    33%,
+      67% {
+      stroke-dashoffset: 0;
+    }
+  
+    to {
+      stroke-dashoffset: -19;
+    }
+  }
+  
+  @keyframes bikeHandlebars {
+    from {
+      stroke-dashoffset: 10;
+    }
+  
+    33%,
+      67% {
+      stroke-dashoffset: 0;
+    }
+  
+    to {
+      stroke-dashoffset: -10;
+    }
+  }
+  
+  @keyframes bikePedals {
+    from {
+      animation-timing-function: ease-in;
+      stroke-dashoffset: -25.133;
+    }
+  
+    33%,
+      67% {
+      animation-timing-function: ease-out;
+      stroke-dashoffset: -21.991;
+    }
+  
+    to {
+      stroke-dashoffset: -25.133;
+    }
+  }
+  
+  @keyframes bikePedalsSpin {
+    from {
+      transform: rotate(0.1875turn);
+    }
+  
+    to {
+      transform: rotate(3.1875turn);
+    }
+  }
+  
+  @keyframes bikeSeat {
+    from {
+      stroke-dashoffset: 5;
+    }
+  
+    33%,
+      67% {
+      stroke-dashoffset: 0;
+    }
+  
+    to {
+      stroke-dashoffset: -5;
+    }
+  }
+  
+  @keyframes bikeSpokes {
+    from {
+      animation-timing-function: ease-in;
+      stroke-dashoffset: -31.416;
+    }
+  
+    33%,
+      67% {
+      animation-timing-function: ease-out;
+      stroke-dashoffset: -23.562;
+    }
+  
+    to {
+      stroke-dashoffset: -31.416;
+    }
+  }
+  
+  @keyframes bikeSpokesSpin {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(3turn);
+    }
+  }
+  
+  @keyframes bikeTire {
+    from {
+      animation-timing-function: ease-in;
+      stroke-dashoffset: 56.549;
+      transform: rotate(0);
+    }
+  
+    33% {
+      stroke-dashoffset: 0;
+      transform: rotate(0.33turn);
+    }
+  
+    67% {
+      animation-timing-function: ease-out;
+      stroke-dashoffset: 0;
+      transform: rotate(0.67turn);
+    }
+  
+    to {
+      stroke-dashoffset: -56.549;
+      transform: rotate(1turn);
+    }
+  }
 
 .contact-form {
     display: flex;
@@ -283,6 +1082,10 @@ section {
     gap: 1rem;
     width: 100%;
     max-width: 500px;
+}
+#contact h5 
+{
+  max-width: 500px;
 }
 
 .contact-form input,
@@ -316,6 +1119,7 @@ section {
 
     nav ul {
         flex-direction: row;
+        position: sticky;
     }
 
     .nav-toggle {

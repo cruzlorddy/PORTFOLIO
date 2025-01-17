@@ -1,0 +1,68 @@
+@media (max-width: 639px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        /* overflow: hidden; */
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+    }
+    main {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8em;
+    }
+    header {
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0r;
+        transition: var(--transition);
+    }
+    section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-text {
+        max-width: 350px;
+    }
+    nav {
+        margin: 0;
+        padding: .7rem;
+        border-radius: 8px;
+        transform: translateY(1.1);
+        transition: var(--transition);
+    }
+     .skill-display {
+        margin-left: 2.5em;
+        grid-template-columns: 1fr 1fr;  /* Switch to single column on mobile */
+         gap: 1.5rem;
+    } 
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card svg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .card h5 {
+        font-size: 1rem;
+    } 
+    #contact {
+        margin-left: 10em;
+        max-width: 300px;
+    }
+}
+   

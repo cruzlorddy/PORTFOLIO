@@ -1,0 +1,42 @@
+/* .fade-section, #about, #contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  /* Active State: Fully visible and in position */
+  /* .fade-section ,#about, #contact.visible section{
+    opacity: 1;
+    transform: translateY(0);
+  } */ */
+
+ section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 4.5s ease-out, transform 1.2s ease-out;
+  will-change: opacity, transform;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Add different transition delays for cascading effects */
+.delay-1 {
+  transition-delay: 0.9s;
+}
+
+.delay-2 {
+  transition-delay: 1.3s;
+}
+
+.delay-3 {
+  transition-delay: 1.9s;
+}
+
+/* Optional: Add a fade-only class for elements that should only fade */
+.fade-only {
+  transition: opacity 2s ease-out;
+}

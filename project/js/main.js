@@ -8,22 +8,47 @@ document.addEventListener('DOMContentLoaded', () => {
         mirror: false
     });
 
-    // Initialize Typed.js
+   // Typed.js Initialization
+const typedElement = document.querySelector('#typed-text');
+if (typedElement) {
     new Typed('#typed-text', {
-        strings: ['Software Developer', 'UI/UX Designer', 'Graphics/video Editor'],
+        strings: ['FullStack Developer', 'Problem Solver', 'n AI Developer'],
         typeSpeed: 100,
         backSpeed: 30,
         backDelay: 2000,
-        loop: true
+        loop: true,
+    });
+}
+
+// VanillaTilt Initialization with Auto Effect
+const tiltElements = document.querySelectorAll("[data-tilt]");
+if (tiltElements.length > 0) {
+    VanillaTilt.init(tiltElements, {
+        max: 15,         // Maximum tilt
+        speed: 400,      // Speed of tilt
+        glare: true,     // Enable glare effect
+        "max-glare": 0.2,// Maximum glare opacity
+        gyroscope: true, // Enable gyroscope effect
     });
 
-    // Initialize VanillaTilt
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.2
+    // Simulate continuous motion by overriding VanillaTilt's default behavior
+    tiltElements.forEach((tiltElement) => {
+        let angle = 0;
+        const interval = setInterval(() => {
+            angle += 1;
+            const tiltX = 15 * Math.sin(angle * (Math.PI / 180)); // Oscillates between -15 and 15
+            const tiltY = 15 * Math.cos(angle * (Math.PI / 180)); // Oscillates between -15 and 15
+
+            tiltElement.vanillaTilt.setValues({
+                tiltX,
+                tiltY,
+                glare: 0.1 + 0.1 * Math.sin(angle * (Math.PI / 90)), // Oscillating glare
+            });
+        }, 30); // Adjust speed here
     });
+}
+
+
 
     // Initialize managers
     themeManager.init();
@@ -47,27 +72,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Programming Language Selector
+    // const languageButtons = document.querySelectorAll('.language-btn');
+    // const languageInfos = document.querySelectorAll('.language-info');
+
+    // languageButtons.forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         const language = button.dataset.language;
+            
+    //         // Update active button
+    //         languageButtons.forEach(btn => btn.classList.remove('active'));
+    //         button.classList.add('active');
+            
+    //         // Show selected language info
+    //         languageInfos.forEach(info => {
+    //             info.classList.remove('active');
+    //             if (info.id === language) {
+    //                 info.classList.add('active');
+    //             }
+    //         });
+    //     });
+    // });
     const languageButtons = document.querySelectorAll('.language-btn');
     const languageInfos = document.querySelectorAll('.language-info');
-
+    
     languageButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const language = button.dataset.language;
-            
+            const selectedLanguage = button.dataset.language;
+            console.log(`Selected language: ${selectedLanguage}`);
+    
             // Update active button
             languageButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
+    
             // Show selected language info
             languageInfos.forEach(info => {
-                info.classList.remove('active');
-                if (info.id === language) {
+                if (info.id === selectedLanguage) {
                     info.classList.add('active');
+                } else {
+                    info.classList.remove('active');
                 }
             });
         });
     });
-
+    
+    
     
 
 

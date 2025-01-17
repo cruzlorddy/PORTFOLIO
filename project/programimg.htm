@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programming language i use</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <section id="languages">
+        <h2>Programming Languages I Use</h2>
+    <div class="background-animation"></div>
+
+        <div class="language-selector">
+            <button class="language-btn active" data-language="javascript">JavaScript</button>
+            <button class="language-btn" data-language="python">Python</button>
+            <button class="language-btn" data-language="html-css">HTML,CSS</button>
+            <button class="language-btn" data-language="react">React</button>
+            <button class="language-btn" data-language="vanilla-css">Vanilla-css</button>
+            <button class="language-btn" data-language="php">PHP</button>
+        </div>
+        <div class="language-info active" id="javascript">
+            <h3>JavaScript</h3>
+            <p>JavaScript is a versatile programming language that powers the web. It enables interactive and dynamic content, making websites come alive with user interactions and real-time updates.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="language-info" id="python">
+            <h3>Python</h3>
+            <p>Perfect for data science, AI, and backend development.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="language-info" id="html-css">
+            <h3>HTML, CSS</h3>
+            <p>Used extensively for frontend website design.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 98%;">98%</div>
+            </div>
+        </div>
+        <div class="language-info" id="react">
+            <h3>React</h3>
+            <p>Interactive user interface.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 95%;">90%</div>
+            </div>
+        </div>
+        <div class="language-info" id="vanilla-css">
+            <h3>Vannilla-css</h3>
+            <p>In support with React to make web pages stunning.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="language-info" id="php">
+            <h3>PHP</h3>
+            <p>Backend and database</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="control">
+          <a href="./index.html">
+            <button class="button">
+              <div class="button-box">
+                <span class="button-elem">
+                  <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="button-elem">
+                  <svg viewBox="0 0 46 40">
+                    <path
+                      d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            </a>
+            <div class="list">
+              <h3>list of projects 👍👇</h3>
+              <a href="./project.html">check them out</a>
+            </div>
+           
+        </div>
+        
+    </section>
+   
+  
+    <style>
+       .back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10rem;
+        }
+    .language-info {
+        display: none;
+    }
+    .language-info.active {
+        display: block;
+    }
+    
+    .language-btn.active {
+        background-color: #007bff;
+        color: white;
+    }
+    /* From Uiverse.io by xopc333 */ 
+    button {
+        /* margin-left: 50%; */
+    }
+    .control{
+      display: flex;
+      gap: 1em;
+    }
+    .list {
+      display: grid;
+      place-content: center;
+    }
+.button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.button:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+@media (max-width:769px) {
+  #languages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .language-selector{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+    </style>
+    
+    <script>
+    const languageButtons = document.querySelectorAll('.language-btn');
+    const languageInfos = document.querySelectorAll('.language-info');
+    
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedLanguage = button.dataset.language;
+            console.log(`Selected language: ${selectedLanguage}`);
+    
+            // Update active button
+            languageButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+    
+            // Show selected language info
+            languageInfos.forEach(info => {
+                if (info.id === selectedLanguage) {
+                    info.classList.add('active');
+                } else {
+                    info.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>
